@@ -1260,3 +1260,7 @@ font-family: 'Arial', sans-serif;
     from { transform: translateY(40px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+@media (max-width: 600px) {
+    /* mobile styles */
+}
+
