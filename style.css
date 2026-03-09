@@ -1263,4 +1263,58 @@ font-family: 'Arial', sans-serif;
 @media (max-width: 600px) {
     /* mobile styles */
 }
+/* MOBILE FIXES */
+@media (max-width: 600px) {
+
+    /* NAV BAR */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    /* BUSINESS HOURS */
+    .hours-right {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .hours-list li {
+        font-size: 14px;
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* BOOKING SECTION */
+    .booking-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* CONTACT + SOCIALS */
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* GENERAL TEXT */
+    h1, h2, h3 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
 
