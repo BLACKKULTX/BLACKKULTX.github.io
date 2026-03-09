@@ -2,8 +2,14 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* MAKE IMAGES RESPONSIVE */
+img {
+    max-width: 100%;
+    height: auto;
+}
 /* BODY BACKGROUND */
    /* Add this to your main CSS, e.g., App.css or global.css */
 
@@ -48,7 +54,7 @@ body, #root {
 /* LOGO */
 .logo {
     color: #ff1493;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -149,7 +155,7 @@ body, #root {
 
 /* IMAGES */
 .carousel img {
-    height: 400px;
+    height: 300px;
     width: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -475,6 +481,7 @@ body.scrolled .about-section {
   margin: auto;
   display: flex;
   gap: 40px;
+    flex-direction: column;
   
 
   /* BLACK GLASSMORPHISM */
@@ -646,7 +653,7 @@ font-family: 'Arial', sans-serif;
 
 /* TEXT */
 .card p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   line-height: 1.6;
   color: white;
@@ -772,11 +779,11 @@ font-family: 'Arial', sans-serif;
     justify-content: space-between;
     align-items: stretch;
     gap: 40px;
-    padding: 140px 10%;
+    padding: 140px ;
     background: #000;
     color: #fff;
     border-radius: 30px;
-    border: 6px solid #ff1493;
+   
     position: relative;
     overflow: hidden;
 }
@@ -1260,61 +1267,3 @@ font-family: 'Arial', sans-serif;
     from { transform: translateY(40px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
-@media (max-width: 600px) {
-    /* mobile styles */
-}
-/* MOBILE FIXES */
-@media (max-width: 600px) {
-
-    /* NAV BAR */
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 6px 10px;
-    }
-
-    /* BUSINESS HOURS */
-    .hours-right {
-        width: 100%;
-        text-align: center;
-        padding: 0 10px;
-    }
-
-    .hours-list li {
-        font-size: 14px;
-    }
-
-    /* GALLERY */
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    /* BOOKING SECTION */
-    .booking-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    /* CONTACT + SOCIALS */
-    .contact-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    /* GENERAL TEXT */
-    h1, h2, h3 {
-        font-size: 1.4rem;
-    }
-
-    p {
-        font-size: 14px;
-    }
-}
-
