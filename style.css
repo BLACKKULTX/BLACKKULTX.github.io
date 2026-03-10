@@ -1,18 +1,7 @@
 /* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* MAKE IMAGES RESPONSIVE */
-img {
-    max-width: 100%;
-    height: auto;
-}
+
 /* BODY BACKGROUND */
-   /* Add this to your main CSS, e.g., App.css or global.css */
-
 body, #root {
   margin: 0;
   padding: 0;
@@ -23,6 +12,7 @@ body, #root {
   background: linear-gradient(90deg, black 50%, #ff1493 50%) repeat-x;
   background-size: 100px 100%;
 }
+
 
 /* HEADER — LOGO LEFT, NAV RIGHT */
 .header {
@@ -155,7 +145,7 @@ body, #root {
 
 /* IMAGES */
 .carousel img {
-    height: 300px;
+    height: 400px;
     width: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -481,22 +471,21 @@ body.scrolled .about-section {
   margin: auto;
   display: flex;
   gap: 40px;
-    flex-direction: column;
-  
+
+  /* REMOVE THIS — it broke your layout */
+  /* flex-direction: column; */
 
   /* BLACK GLASSMORPHISM */
-  background: rgba(0, 0, 0, 0.35); /* translucent black */
-  border: 1px solid rgba(255, 20, 147, 0.4); /* pink border */
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 20, 147, 0.4);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
   padding: 60px;
   border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255, 20, 147, 0.4); 
-  /* pink glow */
- 
-
+  box-shadow: 0 0 25px rgba(255, 20, 147, 0.4);
 }
+
 
 .contact-container:hover {
   animation: jiggle 1.8s ease-in-out;
@@ -576,9 +565,10 @@ font-family: 'Arial', sans-serif;
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .contact-container {
     flex-direction: column;
+    padding: 40px;
   }
 }
 
@@ -792,6 +782,7 @@ font-family: 'Arial', sans-serif;
 .booking-hours-section::before {
     content: "";
     position: absolute;
+    flex-direction: column !important;
     width: 900px;
     height: 900px;
     background: radial-gradient(circle, rgba(255,20,147,0.25), transparent 70%);
@@ -1266,4 +1257,130 @@ font-family: 'Arial', sans-serif;
 @keyframes slideUp {
     from { transform: translateY(40px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 1211px) {
+
+    /* HEADER + LOGO */
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    /* NAVIGATION */
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    /* BOOKING SECTION LAYOUT FIX */
+    .booking-hours-section {
+        display: flex;
+        flex-direction: column !important; /* ← THIS IS THE FIX */
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .booking-left,
+    .payment-stack,
+    .hours-right {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* BUSINESS HOURS FIX */
+    .hours-right {
+        text-align: center;
+    }
+
+    .hours-list li {
+        justify-content: center;
+    }
+
+    /* BOOK NOW BUTTON */
+    .booking-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 900px) {
+    .logo { font-size: 26px; }
+    .navbar a { font-size: 15px; }
+
+  .booking-title,
+  .hours-title {
+    font-size: 22px;
+  }
+
+  .booking-text {
+    font-size: 16px;
+  }
+
+  .hours-list li {
+    font-size: 16px;
+  }
+
+  .weekend-note {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+    .logo { font-size: 22px; }
+    .navbar a { font-size: 14px; }
+
+  .booking-title,
+  .hours-title {
+    font-size: 22px;
+  }
+
+  .booking-text {
+    font-size: 16px;
+  }
+
+  .hours-list li {
+    font-size: 16px;
+  }
+
+  .weekend-note {
+    font-size: 14px;
+  }
+  
+}
+
+@media (max-width: 400px) {
+    .logo { font-size: 18px; }
+    .navbar a { font-size: 12px; }
+
+  .booking-title,
+  .hours-title {
+    font-size: 22px;
+  }
+
+  .booking-text {
+    font-size: 16px;
+  }
+
+  .hours-list li {
+    font-size: 16px;
+  }
+
+  .weekend-note {
+    font-size: 14px;
+  }
 }
