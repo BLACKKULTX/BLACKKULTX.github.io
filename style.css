@@ -1,5 +1,8 @@
 /* RESET */
 
+*{
+box-sizing:border-box;
+}
 
 /* BODY BACKGROUND */
 body, #root {
@@ -1450,6 +1453,7 @@ font-family: 'Arial', sans-serif;
 .navbar ul{
     flex-wrap:wrap;
     justify-content:center;
+    padding-right:0;
 }
 
 .navbar li{
@@ -1502,8 +1506,6 @@ font-family: 'Arial', sans-serif;
     height:auto;
 }
 
-}
-
 /* BOOKING CARDS */
 .cards{
     flex-direction:column;
@@ -1528,7 +1530,7 @@ font-family: 'Arial', sans-serif;
     font-size:1.2rem;
 }
 
-/* BOOKING SECTION */
+/* BOOKING + HOURS SECTION */
 .booking-hours-section{
     flex-direction: column;
     padding: 60px 20px;
@@ -1537,18 +1539,25 @@ font-family: 'Arial', sans-serif;
 .booking-left,
 .hours-right{
     width:100%;
+    padding:20px;
 }
 
+/* FIX TEXT OVERFLOW */
 .bookinghour-title,
 .hours-title{
     font-size:1.8rem;
+    word-wrap:break-word;
 }
 
-.hours-list{
+.hours-list,
+.booking-text,
+.weekend-note{
     font-size:1rem;
+    line-height:1.6;
+    word-wrap:break-word;
+    overflow-wrap:break-word;
 }
 
-}
 /* PAYMENT */
 .pay-box{
     width:200px;
@@ -1574,6 +1583,7 @@ font-family: 'Arial', sans-serif;
     font-size:1.2rem;
 }
 
+}
 
 
 
