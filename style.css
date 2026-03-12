@@ -616,9 +616,11 @@ font-family: 'Arial', sans-serif;
 }
 
 /* CARDS */
-.card {
-  width: 230px;
-  height: 420px;
+.card{
+width:220px;
+height:auto;
+min-height:320px;
+
 
   /* BLACK GLASS */
   background: rgba(0, 0, 0, 0.75);
